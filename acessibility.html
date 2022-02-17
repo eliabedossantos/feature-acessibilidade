@@ -46,7 +46,7 @@
     <body>
 
             <!-- Button trigger modal -->
-            <a type="button" id="btn-acess" class="" data-toggle="modal" data-target="#exampleModal">
+            <a tabindex="0" type="button" id="btn-acess" data-toggle="modal" data-target="#exampleModal">
                 <i style="position: relative;top: -5.6px;left: 6px;" class="fas fa-universal-access"></i>
             </a>
             
@@ -63,27 +63,24 @@
                         <div class="modal-body">
                             <div class="sidebar__content-color">
                                 <h3 class="sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-adjust"></i>Ajustes de cor </h3>
-                                <ul class="color__list">
-                                    <li class="color__list-item autocontraste d-flex justify-content-center align-items-end">
+                                <div class="row color__list justify-content-around">
+                                    <div class="color__list-item autocontraste d-flex justify-content-center align-items-center col-lg-3">
                                         <input type="radio" name="contraste" id="autocontraste" onchange="radioContrast()">
-                                        <label for="autocontraste">Altocontraste</label>
+                                        <label for="autocontraste"></label>
                                         <!-- <p style="color:black !important; position:absolute; z-index: 10;">Auto-contraste</p> -->
-                                    </li>
+                                    </div>
         
-                                    <li class="color__list-item monocromatico">
-                                        <input type="radio" name="contraste" id="monocromatico" onchange="radioContrast()">
-                                        <label for="monocromatico">
-                                            Monocromático
-                                        </label>
-                                    </li>
+                                    <div class="color__list-item monocromatico d-flex justify-content-center align-items-center col-lg-3">
+                                        <input  type="radio" name="contraste" id="monocromatico" onchange="radioContrast()">
+                                        <label for="monocromatico"></label>
+                                    </div>
         
-                                    <li class="color__list-item aumentarContraste">
+                                    <div class="color__list-item aumentarContraste d-flex justify-content-center align-items-center col-lg-3">
                                         <input type="radio" name="contraste" id="aumentarContraste" onchange="radioContrast()"> 
-                                        <label for="aumentarContraste">
-                                            Aumentar Contraste
-                                        </label>
-                                    </li>
-                                  </ul>
+                                        <label for="aumentarContraste"></label>
+                                    </div>
+                                </div>
+
                                 <div class="row mt-3">
                                     <div class="col-lg-4">
                                         <div class="row justify-content-center">
@@ -92,8 +89,8 @@
                                             </label>
                                         </div>
                                         <div class="row justify-content-center">
-                                            <input type="radio" name="contraste" id="cinzaInvetido" onchange="radioContrast()">
-                                            <label class="select-input" for="cinzaInvetido"></label>
+                                            <input  tabindex="0" type="radio" name="contraste" id="cinzaInvetido" onchange="radioContrast()">
+                                         
                                         </div>
                                     </div>
 
@@ -104,8 +101,7 @@
                                             </label>
                                         </div>
                                         <div class="row justify-content-center">
-                                            <input type="radio" name="contraste" id="corInvertida" onchange="radioContrast()"> <br>
-                                            <label class="select-input" for="corInvertida"></label>
+                                            <input  tabindex="0" type="radio" name="contraste" id="corInvertida" onchange="radioContrast()"> <br>
                                         </div>
                                     </div>
                                     
@@ -116,17 +112,20 @@
                                             </label>
                                         </div>
                                         <div class="row justify-content-center">
-                                            <input type="radio" name="contraste" id="darkMode" onchange="radioContrast()">
-                                            <label class="select-input" for="darkMode"></label>
+                                            <input  tabindex="0" type="radio" name="contraste" id="darkMode" onchange="radioContrast()">
                                         </div>
                                     </div>
-
-                                <label for="nenhumContraste">
-                                    Nenhum
-                                </label>
-                                <input type="radio" name="contraste" id="nenhumContraste" onchange="radioContrast()" checked="checked"> <br>
                                 </div>
-                                  
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="nenhumContraste">
+                                            <i style="color:#28336C;" class="fas fa-redo"></i>
+                                            Nenhum
+                                        </label>
+                                        <input class="ml-1"  tabindex="0" type="radio" name="contraste" id="nenhumContraste" onchange="radioContrast()" checked="checked"> <br>
+                                    </div>
+                                </div>
+                                
                                 
                               
                                 
@@ -134,17 +133,8 @@
                                 
                             </div>
         
-                            <div class="sidebar__content-text">
-                                <h3>Ajustes de texto <i class="fas fa-comment-alt"></i></h3>
-                                <label for="tamFonte">Tamanho da fonte</label><br>
-                                <input style="width: 100%;" value="1" min="16" max="25" type="range" name="tamFonte" id="tamFonte" onchange="tamDaFonte()"> <br>
-                                
-                                <label for="tamEspaco">Espaçamento do texto</label><br>
-                                <input style="width: 100%;" value="1" min="1" max="20" type="range" name="tamEspaco" id="tamEspaco" onchange="espacoTexto()"> <br>
-                                
-                                <label for="tamEspacoLinhas">Espaçamento entre linhas</label><br>
-                                <input style="width: 100%;" value="1" min="20" max="50" type="range" name="tamEspacoLinhas" id="tamEspacoLinhas" onchange="espacoLinhas()"> <br>
-        
+                            <div class="sidebar__content-text mt-3">
+                                <h3 class="sidebar__content-title"><i style="color:#28336C;" class="mr-1 fas fa-quote-left"></i>Ajustes de texto</h3>
                                 <label for="fonte_legivel">
                                     Fonte legivel
                                 </label>
@@ -152,150 +142,50 @@
                                     <input type="checkbox" id="fonte_legivel" onchange="fonteLegivel()">
                                     <span class="slider round"></span>
                                 </label> <br>  
+
+                                <label for="tamFonte">Tamanho da fonte</label><br>
+                                <input style="width: 100%;" value="1" min="16" max="25" type="range" name="tamFonte" class="estilo_range" id="tamFonte" onchange="tamDaFonte()"> <br>
+                                
+                                <label for="tamEspaco">Espaçamento do texto</label><br>
+                                <input style="width: 100%;" value="1" min="1" max="20" type="range" name="tamEspaco" class="estilo_range" id="tamEspaco" onchange="espacoTexto()"> <br>
+                                
+                                <label for="tamEspacoLinhas">Espaçamento entre linhas</label><br>
+                                <input style="width: 100%;" value="1" min="20" max="50" type="range" name="tamEspacoLinhas" class="estilo_range" id="tamEspacoLinhas" onchange="espacoLinhas()"> <br>
+        
+                                
                             </div>
                             <div class="sidebar__content-content">
-                                <h3>Ajustes de Conteúdo <i class="fas fa-desktop"></i></h3>
-                                <label for="destacar-link">
-                                    Lupa
-                                </label>
-                                <label class="switch_links">
-                                    <input type="checkbox" id="lupa" onchange="zoom_page()">
-                                    <span class="slider round"></span>
-                                </label> <br> 
-                        
-                                <label for="destacar-link">
-                                    Destacar links
-                                </label>
-                                <label class="switch_links">
-                                    <input type="checkbox" id="destacar-link" onchange="destacarLinks()">
-                                    <span class="slider round"></span>
-                                </label>       
+                                <h3 class="sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-desktop"></i>Ajustes de conteúdo</h3>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="destacar-link">
+                                            Lupa
+                                        </label>
+                                        <label class="switch_links">
+                                            <input type="checkbox" id="lupa" onchange="zoom_page()">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="destacar-link">
+                                            Destacar links
+                                        </label>
+                                        <label class="switch_links">
+                                            <input type="checkbox" id="destacar-link" onchange="destacarLinks()">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                       
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-
-        <!-- <button type="button" id="btn-acess" onclick="openNav()">
-            <i style="position: relative; top: 1.4px;" class="fas fa-universal-access"></i>
-        </button>
-        <div id="mySidenav" class="sidenav">
-            <div class="sidebar__header">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <h1 id="sidebar__header-title">
-                    Acessibilidade
-                </h1> 
-            </div>
-                <div class="sidebar__content">
-                    <div class="sidebar__content-color">
-                        <h3>Ajustes de cor <i class="fas fa-adjust"></i></h3>
-                        <ul class="color__list">
-                            <li class="color__list-item autocontraste">
-                                <input type="radio" name="contraste" id="autocontraste" onchange="radioContrast()">
-                                <label for="autocontraste">Autocontraste</label>
-                                <div data-toggle="#" class="item__content">
-                                    <svg width="38" height="43" viewBox="0 0 38 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21.2597 43C27.8172 43 33.8062 39.9829 37.774 35.039C38.361 34.3076 37.7209 33.2392 36.8138 33.4139C26.4993 35.4004 17.0271 27.4026 17.0271 16.8728C17.0271 10.8073 20.2379 5.22962 25.4561 2.22643C26.2605 1.7635 26.0582 0.530193 25.1442 0.359453C23.8629 0.120512 22.5627 0.000196216 21.2597 0C9.52461 0 0 9.61714 0 21.5C0 33.3677 9.50966 43 21.2597 43Z" fill="#28336C"/>
-                                        </svg>
-                                        
-                                    sdjhsdjhfdjhbdsjnhbf
-                                </div>
-                            </li>
-
-                            <li class="color__list-item">
-                                <input type="radio" name="contraste" id="monocromatico" onchange="radioContrast()">
-                                sdjfhjfjfd
-                                <label for="monocromatico">
-                                    Monocromático
-                                </label>
-                            </li>
-
-                            <li class="color__list-item">
-                                <input type="radio" name="contraste" id="aumentarContraste" onchange="radioContrast()"> 
-                                <label for="aumentarContraste">
-                                    Aumentar Contraste
-                                </label>
-                            </li>
-                          
-                          
-                            
-                          </ul>
-
-                         
-                      
-                        
-                        
-                        <label for="cinzaInvetido">
-                            Escala de cinza invertida
-                        </label>
-                        <input type="radio" name="contraste" id="cinzaInvetido" onchange="radioContrast()"> <br>
-                        <label for="corInvertida">
-                            Cores invertidas
-                        </label>
-                        <input type="radio" name="contraste" id="corInvertida" onchange="radioContrast()"> <br>
-                        <label for="darkMode">
-                            Modo escuro
-                        </label>
-                        <input type="radio" name="contraste" id="darkMode" onchange="radioContrast()"> <br>
-                        <label for="nenhumContraste">
-                            Nenhum
-                        </label>
-                        <input type="radio" name="contraste" id="nenhumContraste" onchange="radioContrast()" checked="checked"> <br>
-                    </div>
-
-                    <div class="sidebar__content-text">
-                        <h3>Ajustes de texto <i class="fas fa-comment-alt"></i></h3>
-                        <label for="tamFonte">Tamanho da fonte</label><br>
-                        <input style="width: 100%;" value="1" min="16" max="25" type="range" name="tamFonte" id="tamFonte" onchange="tamDaFonte()"> <br>
-                        
-                        <label for="tamEspaco">Espaçamento do texto</label><br>
-                        <input style="width: 100%;" value="1" min="1" max="20" type="range" name="tamEspaco" id="tamEspaco" onchange="espacoTexto()"> <br>
-                        
-                        <label for="tamEspacoLinhas">Espaçamento entre linhas</label><br>
-                        <input style="width: 100%;" value="1" min="20" max="50" type="range" name="tamEspacoLinhas" id="tamEspacoLinhas" onchange="espacoLinhas()"> <br>
-
-                        <label for="fonte_legivel">
-                            Fonte legivel
-                        </label>
-                        <label class="switch_links">
-                            <input type="checkbox" id="fonte_legivel" onchange="fonteLegivel()">
-                            <span class="slider round"></span>
-                        </label> <br>  
-                    </div>
-                    <div class="sidebar__content-content">
-                        <h3>Ajustes de Conteúdo <i class="fas fa-desktop"></i></h3>
-                        <label for="destacar-link">
-                            Lupa
-                        </label>
-                        <label class="switch_links">
-                            <input type="checkbox" id="lupa" onchange="zoom_page()">
-                            <span class="slider round"></span>
-                        </label> <br> 
-                
-                        <label for="destacar-link">
-                            Destacar links
-                        </label>
-                        <label class="switch_links">
-                            <input type="checkbox" id="destacar-link" onchange="destacarLinks()">
-                            <span class="slider round"></span>
-                        </label>       
-                    </div>
-                </div>
-            </div> -->
-       
         
-        <!-- <label for="corBackground">Cor de fundo </label> 
-        <input type="color" name="corBackground" id="corBackground" onchange="corBackgroundBody()"> <br>
-
-        <label for="corTexto">Cor de texto </label> 
-        <input type="color" name="corTexto" id="corTexto" onchange="corTextoBody()"> <br> -->
     
 
-
-            <button role="radio" aria-checked="false">dsdfffgf</button>
-    
     <!-- scripts  -->
     <script type="text/javascript" src="assets/js/acessibility.js"></script>
     <script type="text/javascript" src="https://kit.fontawesome.com/daa729d255.js" crossorigin="anonymous"></script>

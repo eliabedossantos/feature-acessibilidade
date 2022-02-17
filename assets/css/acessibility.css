@@ -198,11 +198,12 @@ body{
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #28336cbd;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #28336cbd;
+    border: 2px solid blue;
   }
   
   input:checked + .slider:before {
@@ -260,12 +261,12 @@ body{
   text-indent: 100%;
   top: 1px;
   white-space: nowrap;
-  height: 96%;
+  height: 99%;
 }
-
+/* 
 .color__list-item input{
   visibility: hidden;
-}
+} */
 
 .item__content{
   position: absolute;
@@ -275,18 +276,21 @@ body{
   background-image: url("../img/autocontraste.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
   
 }
 .monocromatico label {
   background-image: url(../img/monocromatico.png);
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
 }
 
 .aumentarContraste label {
   background-image: url(../img/aumentar-contraste.png);
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
 }
 
 
@@ -338,8 +342,9 @@ body{
 }
 
 h3.sidebar__content-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #5A5A5A;
+  font-weight: bold;
 }
 
 label.select-detail {
@@ -368,12 +373,49 @@ label.select-detail:before {
 }
 
 
-input[type=radio]:checked + label:before {
+/* input[type=radio]:checked + label:before {
   content: "\2022";
   color: #f3f3f3;
   font-size: 30px;
   text-align: center;
   line-height: 18px;
+} */
+
+input[type=radio]{
+  -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+}
+
+.estilo_range {
+  -webkit-appearance: none;
+  background: #d3d3d3;
+  outline: none;
+  width: 100%;
+  height: 20px;
+  border-radius: 9px;   
+}
+
+.estilo_range:focus{
+  border: 2px solid blue;
+}
+
+.estilo_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* appearance: none; */
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #28336C;
+  cursor: pointer;
+}
+
+.estilo_range::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #2796ee;
+  cursor: pointer;
 }
 
 /* https://pt.stackoverflow.com/questions/95850/como-adicionar-cor-ao-radio */

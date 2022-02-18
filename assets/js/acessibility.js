@@ -145,28 +145,28 @@ var checkboxDestacarTag = document.getElementById("destacar-link");
 function destacarLinks(){
 	let checkbox = document.getElementById('destacar-link');
 	if(checkbox.checked) {
-    	document.querySelector("body").style.color = "#ff0000";
-    	document.querySelector("body").style.textDecoration = "underline";
-		document.querySelector("body").style.fontSize = 1.3+"em"
+    	document.querySelector("a").style.color = "#ff0000";
+    	document.querySelector("a").style.textDecoration = "underline";
+		document.querySelector("a").style.fontSize = 1.3+"em"
 		destacarLink = window.sessionStorage.setItem("DestacarLinks", 1)
 		
 	} else {
-    	document.querySelector("body").style.color = "";
-    	document.querySelector("body").style.textDecoration = "";
-		document.querySelector("body").style.fontSize = ""
+    	document.querySelector("a").style.color = "";
+    	document.querySelector("a").style.textDecoration = "";
+		document.querySelector("a").style.fontSize = ""
 		destacarLink = window.sessionStorage.setItem("DestacarLinks", 0)
 	}
 }
 if(destacarLink == 1){
-	document.querySelector("body").style.color = "#ff0000";
-    document.querySelector("body").style.textDecoration = "underline";
-	document.querySelector("body").style.fontSize = 1.3+"em"
+	document.querySelector("a").style.color = "#ff0000";
+    document.querySelector("a").style.textDecoration = "underline";
+	document.querySelector("a").style.fontSize = 1.3+"em"
 	checkboxDestacarTag.setAttribute("checked", "checked");
 }
 else{
-	document.querySelector("body").style.color = "";
-	document.querySelector("body").style.textDecoration = "";
-	document.querySelector("body").style.fontSize = ""
+	document.querySelector("a").style.color = "";
+	document.querySelector("a").style.textDecoration = "";
+	document.querySelector("a").style.fontSize = ""
 }
 
 // fonte legivel

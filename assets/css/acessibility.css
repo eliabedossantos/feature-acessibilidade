@@ -180,7 +180,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #888282;
+    background-color: #E8E8E8;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -192,7 +192,7 @@ body{
     width: 15px;
     left: 1px;
     bottom: 3px;
-    background-color: white;
+    background-color: #28336C;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -262,6 +262,9 @@ body{
   top: 1px;
   white-space: nowrap;
   height: 99%;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* 
 .color__list-item input{
@@ -295,9 +298,9 @@ body{
 
 
 /* modal */
-.sidebar__content{
+/* .sidebar__content{
   top: 34px;
-}
+} */
 .sidebar__content input:focus + label {
   outline: 2px dotted #21b4d0;
 }
@@ -418,4 +421,22 @@ input[type=radio]{
   cursor: pointer;
 }
 
-/* https://pt.stackoverflow.com/questions/95850/como-adicionar-cor-ao-radio */
+/* MEDIA QUERIES */
+@media (max-width: 900px){
+  .autocontraste label, .monocromatico label,  .aumentarContraste label{
+    background-size: unset;
+  }
+  .autocontraste, .monocromatico,  .aumentarContraste{
+   width: 80% !important;
+  }
+  div.color__list{
+    justify-content: center !important;
+  }
+  .monocromatico,  .aumentarContraste{
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+  .modal-dialog {
+    width: 80% !important;
+  }
+}

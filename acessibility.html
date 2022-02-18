@@ -61,8 +61,8 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="sidebar__content-color">
-                                <h3 class="sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-adjust"></i>Ajustes de cor </h3>
+                            <h3 class="sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-adjust"></i>Ajustes de cor </h3>
+                            <div class="ml-3 mt-2 sidebar__content-color">
                                 <div class="row color__list justify-content-around">
                                     <div class="color__list-item autocontraste d-flex justify-content-center align-items-center col-lg-3">
                                         <input type="radio" name="contraste" id="autocontraste" onchange="radioContrast()">
@@ -82,41 +82,26 @@
                                 </div>
 
                                 <div class="row mt-3">
-                                    <div class="col-lg-4">
-                                        <div class="row justify-content-center">
-                                            <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
-                                                Escala de cinza <br> invertida
-                                            </label>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <input  tabindex="0" type="radio" name="contraste" id="cinzaInvetido" onchange="radioContrast()">
-                                         
-                                        </div>
+                                    <div class="col-lg-4 text-center">
+                                        <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
+                                            Escala de cinza invertida
+                                        </label> <br>
+                                        <input tabindex="0" type="radio" name="contraste" id="cinzaInvetido" onchange="radioContrast()">
                                     </div>
-
-                                    <div class="col-lg-4">
-                                        <div class="row justify-content-center">
-                                            <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
-                                                Cores <br> Invertidas
-                                            </label>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <input  tabindex="0" type="radio" name="contraste" id="corInvertida" onchange="radioContrast()"> <br>
-                                        </div>
+                                    <div class="col-lg-4 text-center">
+                                        <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
+                                            Cores Invertidas
+                                        </label> <br>
+                                        <input  tabindex="0" type="radio" name="contraste" id="corInvertida" onchange="radioContrast()">
                                     </div>
-                                    
-                                    <div class="col-lg-4">
-                                        <div class="row justify-content-center mt-4">
-                                            <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
-                                                Modo escuro
-                                            </label>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <input  tabindex="0" type="radio" name="contraste" id="darkMode" onchange="radioContrast()">
-                                        </div>
-                                    </div>
+                                    <div class="col-lg-4 text-center">
+                                        <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
+                                            Modo escuro 
+                                        </label> <br>
+                                        <input  tabindex="0" type="radio" name="contraste" id="darkMode" onchange="radioContrast()">
                                 </div>
-                                <div class="row">
+                                </div>
+                                <div class="row mt-2">
                                     <div class="col-12">
                                         <label for="nenhumContraste">
                                             <i style="color:#28336C;" class="fas fa-redo"></i>
@@ -125,16 +110,10 @@
                                         <input class="ml-1"  tabindex="0" type="radio" name="contraste" id="nenhumContraste" onchange="radioContrast()" checked="checked"> <br>
                                     </div>
                                 </div>
-                                
-                                
-                              
-                                
-                                
-                                
                             </div>
         
                             <div class="sidebar__content-text mt-3">
-                                <h3 class="sidebar__content-title"><i style="color:#28336C;" class="mr-1 fas fa-quote-left"></i>Ajustes de texto</h3>
+                                <h3 clas="sidebar__content-title"><i style="color:#28336C;" class="mr-1 fas fa-quote-left"></i>Ajustes de texto</h3>
                                 <label for="fonte_legivel">
                                     Fonte legivel
                                 </label>
@@ -154,7 +133,7 @@
         
                                 
                             </div>
-                            <div class="sidebar__content-content">
+                            <div class="sidebar__content-content mt-3">
                                 <h3 class="sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-desktop"></i>Ajustes de conteúdo</h3>
                                 <div class="row">
                                     <div class="col-6">

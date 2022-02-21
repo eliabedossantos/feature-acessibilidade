@@ -146,16 +146,58 @@ body{
 	cursor: pointer;
 }
 
- .dark{
-   background-color: #142136;
-   color: #fff;
+ .dark body, .dark section, .dark nav{
+   background-color: #131313 !important;
+   color: #fff !important;
  }
 
- .dark div{
-  background-color: #0c2142;
+.dark div, .dark a{
+  background-color: #202021 !important;
  }
 
+ .dark button{
+  -webkit-filter: grayscale(100%) contrast(120%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+      filter: grayscale(100%) contrast(120%);
+ }
 
+ .dark h1,
+ .dark h2,
+ .dark h3,
+ .dark h4,
+ .dark h5,
+ .dark h6,
+ .dark p,
+ .dark label,
+ .dark strong,
+ .dark em,
+ .dark cite,
+ .dark q,
+ .dark i,
+ .dark b,
+ .dark u,
+ .dark span {
+   color: white !important;
+ }
+
+.dark input[type=text],
+.dark input[type=password],
+.dark input[type=url],
+.dark input[type=search],
+.dark input[type=email],
+.dark input[type=tel],
+.dark input[type=date],
+.dark input[type=month],
+.dark input[type=week],
+.dark input[type=datetime],
+.dark input[type=datetime-local],
+.dark textarea,
+.dark input[type=number] {
+    background: #3c4042 !important;
+    color: white !important;
+}
 
 /* slider destacar links */
 .switch_links {

@@ -45,125 +45,109 @@
     </head>
     <body>
 
-            <!-- Button trigger modal -->
-            <a tabindex="0" type="button" id="btn-acess" data-toggle="modal" data-target="#exampleModal">
-                <i style="position: relative;top: -5.6px;left: 6px;" class="fas fa-universal-access"></i>
-            </a>
-            
-            <!-- Modal -->
-            <div class="modal fade p-0" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog m-0" role="document">
-                    <div class="modal-content sidebar__content">
-                        <div class="modal-header sidebar-header d-flex justify-content-center align-items-center">
-                            <h5 class="modal-title" id="exampleModalLabel">Acessibilidade</h5>
-                            <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+        <a href="#" id="open-acessibilidade" onclick="openAcess()"><img class="w-75" src="assets/img/acessibilidade.svg"></a>
+        <section id="acessibilidade" class="acessibilidade">
+            <div class="sidebar__content">
+                <div class="modal-header sidebar-header d-flex justify-content-center align-items-center">
+                    <h5 class="modal-title" id="exampleModalLabel">Acessibilidade</h5>
+                    <a href="#" id="close-acessibilidade" onclick="closeAcess()"><img src="assets/img/btn-close.svg"></a>
+                </div>
+                <div class="box">
+                    <h3 class="sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-adjust"></i>Ajustes de cor </h3>
+                    <div class="ml-3 mt-2 sidebar__content-color">
+                        <div class="row color__list justify-content-between">
+                            <div class="color__list-item autocontraste d-flex justify-content-center align-items-center col-lg-3">
+                                <input type="radio" name="contraste" id="autocontraste" onchange="radioContrast()">
+                                <label for="autocontraste"></label>
+                            </div>
+        
+                            <div class="color__list-item monocromatico d-flex justify-content-center align-items-center col-lg-3">
+                                <input  type="radio" name="contraste" id="monocromatico" onchange="radioContrast()">
+                                <label for="monocromatico"></label>
+                            </div>
+        
+                            <div class="color__list-item aumentarContraste d-flex justify-content-center align-items-center col-lg-3">
+                                <input type="radio" name="contraste" id="aumentarContraste" onchange="radioContrast()"> 
+                                <label for="aumentarContraste"></label>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <h3 class="sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-adjust"></i>Ajustes de cor </h3>
-                            <div class="ml-3 mt-2 sidebar__content-color">
-                                <div class="row color__list justify-content-around">
-                                    <div class="color__list-item autocontraste d-flex justify-content-center align-items-center col-lg-3">
-                                        <input type="radio" name="contraste" id="autocontraste" onchange="radioContrast()">
-                                        <label for="autocontraste"></label>
-                                        <!-- <p style="color:black !important; position:absolute; z-index: 10;">Auto-contraste</p> -->
-                                    </div>
-        
-                                    <div class="color__list-item monocromatico d-flex justify-content-center align-items-center col-lg-3">
-                                        <input  type="radio" name="contraste" id="monocromatico" onchange="radioContrast()">
-                                        <label for="monocromatico"></label>
-                                    </div>
-        
-                                    <div class="color__list-item aumentarContraste d-flex justify-content-center align-items-center col-lg-3">
-                                        <input type="radio" name="contraste" id="aumentarContraste" onchange="radioContrast()"> 
-                                        <label for="aumentarContraste"></label>
-                                    </div>
-                                </div>
-
-                                <div class="row mt-3">
-                                    <div class="col-lg-4 text-center">
-                                        <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
-                                            Escala de cinza invertida
-                                        </label> <br>
-                                        <input tabindex="0" type="radio" name="contraste" id="cinzaInvetido" onchange="radioContrast()">
-                                    </div>
-                                    <div class="col-lg-4 text-center">
-                                        <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
-                                            Cores Invertidas
-                                        </label> <br>
-                                        <input  tabindex="0" type="radio" name="contraste" id="corInvertida" onchange="radioContrast()">
-                                    </div>
-                                    <div class="col-lg-4 mt-4 text-center">
-                                        <label style="color: #5A5A5A;font-size: 1.1em;font-weight: 500;" class="text-center" for="cinzaInvetido">
-                                            Modo escuro 
-                                        </label> <br>
-                                        <input  tabindex="0" type="radio" name="contraste" id="darkMode" onchange="radioContrast()">
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-12">
-                                        <label for="nenhumContraste">
-                                            <i style="color:#28336C;" class="fas fa-redo"></i>
-                                            Nenhum
-                                        </label>
-                                        <input class="ml-1"  tabindex="0" type="radio" name="contraste" id="nenhumContraste" onchange="radioContrast()" checked="checked"> <br>
-                                    </div>
-                                </div>
+                        <div class="row color__list justify-content-between mt-2 mb-3">
+                            <div class="color__list-item cinzaInvetido d-flex justify-content-center align-items-center col-lg-3">
+                                <input type="radio" name="contraste" id="cinzaInvetido" onchange="radioContrast()"> 
+                                <label for="cinzaInvetido"></label>
                             </div>
         
-                            <h3 class="mt-3 sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-quote-left"></i>Ajustes de texto</h3>
-                            <div class="sidebar__content-text ml-3 mt-3">
-                           
-                                <label for="fonte_legivel">
-                                    Fonte legivel
+                            <div class="color__list-item corInvertida d-flex justify-content-center align-items-center col-lg-3">
+                                <input type="radio" name="contraste" id="corInvertida" onchange="radioContrast()"> 
+                                <label for="corInvertida"></label>
+                            </div>
+                            
+                            <div class="color__list-item darkMode d-flex justify-content-center align-items-center col-lg-3">
+                                <input type="radio" name="contraste" id="darkMode" onchange="radioContrast()"> 
+                                <label for="darkMode"></label>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <label for="nenhumContraste">
+                                    <i style="color:#28336C;" class="fas fa-redo"></i>
+                                    Nenhum
                                 </label>
-                                <label class="switch_links">
-                                    <input type="checkbox" id="fonte_legivel" onchange="fonteLegivel()">
-                                    <span class="slider round"></span>
-                                </label> <br>  
-
-                                <label for="tamFonte">Tamanho da fonte</label><br>
-                                <input style="width: 100%;" value="1" min="16" max="25" type="range" name="tamFonte" class="estilo_range" id="tamFonte" onchange="tamDaFonte()"> <br>
-                                
-                                <label for="tamEspaco">Espaçamento do texto</label><br>
-                                <input style="width: 100%;" value="1" min="1" max="20" type="range" name="tamEspaco" class="estilo_range" id="tamEspaco" onchange="espacoTexto()"> <br>
-                                
-                                <label for="tamEspacoLinhas">Espaçamento entre linhas</label><br>
-                                <input style="width: 100%;" value="1" min="20" max="50" type="range" name="tamEspacoLinhas" class="estilo_range" id="tamEspacoLinhas" onchange="espacoLinhas()"> <br>
+                                <input class="ml-1"  tabindex="0" type="radio" name="contraste" id="nenhumContraste" onchange="radioContrast()" checked="checked"> <br>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h3 class="mt-3 sidebar__content-title"><i style="color:#28336C;" class=" mr-1 fas fa-quote-left"></i>Ajustes de texto</h3>
+                    <div class="sidebar__content-text ml-3 mt-3">
+                        <label for="fonte_legivel">
+                            Fonte legivel
+                        </label>
+                        <label class="switch_links">
+                            <input type="checkbox" id="fonte_legivel" onchange="fonteLegivel()">
+                            <span class="slider round"></span>
+                        </label> <br>  
         
-                                
-                            </div>
-                            <h3 class="sidebar__content-title mt-3"><i style="color:#28336C;" class=" mr-1 fas fa-desktop"></i>Ajustes de conteúdo</h3>
-                            <div class="sidebar__content-content ml-3 mt-3">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <label for="destacar-link">
-                                            Lupa
-                                        </label>
-                                        <label class="switch_links">
-                                            <input type="checkbox" id="lupa" onchange="zoom_page()">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <label for="destacar-link">
-                                            Destacar links
-                                        </label>
-                                        <label class="switch_links">
-                                            <input type="checkbox" id="destacar-link" onchange="destacarLinks()">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
+                        <label for="tamFonte">Tamanho da fonte</label><br>
+                        <input style="width: 100%;" value="1" min="1" max="4" type="range" name="tamFonte" class="estilo_range" id="tamFonte" onchange="tamDaFonte()"> <br>
+                        
+                        <label for="tamEspaco">Espaçamento do texto</label><br>
+                        <input style="width: 100%;" value="1" min="1" max="4" type="range" name="tamEspaco" class="estilo_range" id="tamEspaco" onchange="espacoTexto()"> <br>
+                        
+                        <label for="tamEspacoLinhas">Espaçamento entre linhas</label><br>
+                        <input style="width: 100%;" value="1" min="1" max="4" type="range" name="tamEspacoLinhas" class="estilo_range" id="tamEspacoLinhas" onchange="espacoLinhas()"> <br>
+                    </div>
+        
+                    <hr class="my-4">
+        
+                    <h3 class="sidebar__content-title mt-3"><i style="color:#28336C;" class=" mr-1 fas fa-desktop"></i>Ajustes de conteúdo</h3>
+                        <div class="sidebar__content-content ml-3 mt-3">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label for="destacar-link">
+                                        Lupa
+                                    </label>
+                                    <label class="switch_links">
+                                        <input type="checkbox" id="lupa" onchange="zoom_page()">
+                                        <span class="slider round"></span>
+                                    </label>
                                 </div>
-                                       
+                                <div class="col-lg-6">
+                                    <label for="destacar-link">
+                                        Destacar links
+                                    </label>
+                                    <label class="switch_links">
+                                        <input type="checkbox" id="destacar-link" onchange="destacarLinks()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
                             </div>
+                                    
                         </div>
                     </div>
                 </div>
             </div>
-
-        
+        </section>
     
 
     <!-- scripts  -->

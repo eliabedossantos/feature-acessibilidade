@@ -1,4 +1,4 @@
-// abrir sidebar
+// open sidebar
 const sideBar  =  document.getElementById('acessibilidade');
 function openAcess(){
 	sideBar.classList.add("active");
@@ -6,7 +6,6 @@ function openAcess(){
 function closeAcess(){
 	sideBar.classList.remove("active");
 }
-
 // CONTRAST
 const htmlTag = document.querySelector("html");
 var stateContrast = window.sessionStorage.getItem("contrast");
@@ -18,47 +17,38 @@ function radioContrast(){
 	if(radioButtons[0].checked){
 		htmlTag.classList.add("contrast_preto_branco_amarelo");
 		stateContrast = window.sessionStorage.setItem("contrast", "1");
-		logo.removeAttribute("src");
-		logo.setAttribute("src", "assets/img/logo-white.png");
 	}
 	else if(radioButtons[1].checked){
 		htmlTag.classList.add("contrast_preto_branco");
 		stateContrast = window.sessionStorage.setItem("contrast", "3");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 	}
 	else if(radioButtons[2].checked){
 		htmlTag.classList.add("contrast_aumentar_contraste");
 		stateContrast = window.sessionStorage.setItem("contrast", "2");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 	}
 	else if(radioButtons[3].checked){
 		htmlTag.classList.add("contrast_preto_branco_invertida");
 		stateContrast = window.sessionStorage.setItem("contrast", "4");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 	}
 	else if(radioButtons[4].checked){
 		htmlTag.classList.add("contrast_inverter_cor");
 		stateContrast = window.sessionStorage.setItem("contrast", "5");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 	}
 	else if(radioButtons[5].checked){
 		document.body.classList.add("dark");
 		stateContrast = window.sessionStorage.setItem("contrast", "6");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-white.png');
 	}
-	else if(radioButtons[6].checked){
-		htmlTag.removeAttribute("class");
-		document.body.removeAttribute("class");
+	else{
 		stateContrast = window.sessionStorage.setItem("contrast", "0");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
-
 	}
+	// else if(radioButtons[6].checked){
+	// 	htmlTag.removeAttribute("class");
+	// 	document.body.removeAttribute("class");
+	// 	stateContrast = window.sessionStorage.setItem("contrast", "0");
+	// 	logo.removeAttribute("src");
+	// 	logo.setAttribute('src', 'assets/img/logo-revo.png');
+
+	// }
 }
 
 /**
@@ -69,9 +59,6 @@ switch(stateContrast){
 	case "0": 
 		htmlTag.removeAttribute("class");
 		document.body.removeAttribute("class");
-		document.getElementById("nenhumContraste").setAttribute("checked", "checked");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 		break;
 	case "1": 
 		htmlTag.classList.add("contrast_preto_branco_amarelo");
@@ -82,32 +69,22 @@ switch(stateContrast){
 	case "2": 
 		htmlTag.classList.add("contrast_aumentar_contraste");
 		document.getElementById("aumentarContraste").setAttribute("checked", "checked");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 		break;
 	case "3": 
 		htmlTag.classList.add("contrast_preto_branco");
 		document.getElementById("monocromatico").setAttribute("checked", "checked");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 		break;
 	case "4": 
 		htmlTag.classList.add("contrast_preto_branco_invertida");
 		document.getElementById("cinzaInvetido").setAttribute("checked", "checked");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 		break;
 	case "5": 
 		htmlTag.classList.add("contrast_inverter_cor");
 		document.getElementById("corInvertida").setAttribute("checked", "checked");
-		logo.removeAttribute("src");
-		logo.setAttribute('src', 'assets/img/logo-revo.png');
 		break;
 	case "6": 
 		document.body.classList.add("dark");
 		document.getElementById("darkMode").setAttribute("checked", "checked");
-		logo.removeAttribute("src");
-		logo.setAttribute("src", "assets/img/logo-white.png");
 		break;
 }
 

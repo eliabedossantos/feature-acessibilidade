@@ -10,7 +10,6 @@ function closeAcess(){
 const htmlTag = document.querySelector("html");
 var stateContrast = window.sessionStorage.getItem("contrast");
 var radioButtons = document.getElementsByName("contraste");
-var logo = document.querySelector("#logo");
 function radioContrast(){
 	htmlTag.removeAttribute("class");
 	document.body.removeAttribute("class");

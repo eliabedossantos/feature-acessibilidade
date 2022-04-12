@@ -40,14 +40,6 @@ function radioContrast(){
 	else{
 		stateContrast = window.sessionStorage.setItem("contrast", "0");
 	}
-	// else if(radioButtons[6].checked){
-	// 	htmlTag.removeAttribute("class");
-	// 	document.body.removeAttribute("class");
-	// 	stateContrast = window.sessionStorage.setItem("contrast", "0");
-	// 	logo.removeAttribute("src");
-	// 	logo.setAttribute('src', 'assets/img/logo-revo.png');
-
-	// }
 }
 
 /**
@@ -62,8 +54,6 @@ switch(stateContrast){
 	case "1": 
 		htmlTag.classList.add("contrast_preto_branco_amarelo");
 		document.getElementById("autocontraste").setAttribute("checked", "checked");
-		logo.removeAttribute("src");
-		logo.setAttribute("src", "assets/img/logo-white.png");
 		break;
 	case "2": 
 		htmlTag.classList.add("contrast_aumentar_contraste");
@@ -94,20 +84,20 @@ var rangeFontTag = document.getElementById("tamFonte");
 function tamDaFonte(){
 	let tamanhoFonte = parseInt(document.querySelector('#tamFonte').value);
 	tamFont = window.sessionStorage.setItem("tamFonte", tamanhoFonte);
-		htmlTag.classList.remove("tamFont"+'1');	
-		htmlTag.classList.remove("tamFont"+'2');
-		htmlTag.classList.remove("tamFont"+'3');
+		htmlTag.classList.remove("tamFont1");	
+		htmlTag.classList.remove("tamFont2");
+		htmlTag.classList.remove("tamFont3");
 		if(tamanhoFonte == 1){
 			htmlTag.classList.add("");
 		}
 		else if(tamanhoFonte == 2){
-			htmlTag.classList.add("tamFont"+'1');
+			htmlTag.classList.add("tamFont1");
 		}
 		else if(tamanhoFonte == 3){
-			htmlTag.classList.add("tamFont"+'2');
+			htmlTag.classList.add("tamFont2");
 		}
 		else if(tamanhoFonte == 4){
-			htmlTag.classList.add("tamFont"+'3');
+			htmlTag.classList.add("tamFont3");
 		}
 
 
@@ -115,30 +105,30 @@ function tamDaFonte(){
 
 switch(tamFont){
 	case "1": 
-	htmlTag.classList.remove("tamFont"+'1');	
-	htmlTag.classList.remove("tamFont"+'2');
-	htmlTag.classList.remove("tamFont"+'3');
+	htmlTag.classList.remove("tamFont1");	
+	htmlTag.classList.remove("tamFont2");
+	htmlTag.classList.remove("tamFont3");
 	rangeFontTag.setAttribute("value", tamFont);
 	break;
 	case "2": 
-	htmlTag.classList.remove("tamFont"+'1');	
-	htmlTag.classList.remove("tamFont"+'2');
-	htmlTag.classList.remove("tamFont"+'3');
-	htmlTag.classList.add("tamFont"+'1');
+	htmlTag.classList.remove("tamFont1");	
+	htmlTag.classList.remove("tamFont2");
+	htmlTag.classList.remove("tamFont3");
+	htmlTag.classList.add("tamFont1");
 	rangeFontTag.setAttribute("value", tamFont);
 	break;
 	case "3": 
-	htmlTag.classList.remove("tamFont"+'1');	
-	htmlTag.classList.remove("tamFont"+'2');
-	htmlTag.classList.remove("tamFont"+'3');
-	htmlTag.classList.add("tamFont"+'2');
+	htmlTag.classList.remove("tamFont1");	
+	htmlTag.classList.remove("tamFont2");
+	htmlTag.classList.remove("tamFont3");
+	htmlTag.classList.add("tamFont2");
 	rangeFontTag.setAttribute("value", tamFont);
 	break;
 	case "4": 
-	htmlTag.classList.remove("tamFont"+'1');	
-	htmlTag.classList.remove("tamFont"+'2');
-	htmlTag.classList.remove("tamFont"+'3');
-	htmlTag.classList.add("tamFont"+'3');
+	htmlTag.classList.remove("tamFont1");	
+	htmlTag.classList.remove("tamFont2");
+	htmlTag.classList.remove("tamFont3");
+	htmlTag.classList.add("tamFont3");
 	rangeFontTag.setAttribute("value", tamFont);
 	break;
 
@@ -151,50 +141,50 @@ var rangeEspacoTextoTag = document.getElementById("tamEspaco");
 function espacoTexto(){
 	let tamanhoEspaco = parseInt(document.querySelector('#tamEspaco').value);
 	tamEspacoTexto = window.sessionStorage.setItem("tamEspacoTexto", tamanhoEspaco);
-	htmlTag.classList.remove("espacoText"+'1');	
-	htmlTag.classList.remove("espacoText"+'2');
-	htmlTag.classList.remove("espacoText"+'3');
+	htmlTag.classList.remove("espacoText1");	
+	htmlTag.classList.remove("espacoText2");
+	htmlTag.classList.remove("espacoText3");
 	if(tamanhoEspaco == 1){
 		htmlTag.classList.add("");
 	}
 	else if(tamanhoEspaco == 2){
-		htmlTag.classList.add("espacoText"+'1');
+		htmlTag.classList.add("espacoText1");
 	}
 	else if(tamanhoEspaco == 3){
-		htmlTag.classList.add("espacoText"+'2');
+		htmlTag.classList.add("espacoText2");
 	}
 	else if(tamanhoEspaco == 4){
-		htmlTag.classList.add("espacoText"+'3');
+		htmlTag.classList.add("espacoText3");
 	}
 
 }
  
 switch(tamEspacoTexto){
 	case "1": 
-	htmlTag.classList.remove("espacoText"+'1');	
-	htmlTag.classList.remove("espacoText"+'2');
-	htmlTag.classList.remove("espacoText"+'3');
+	htmlTag.classList.remove("espacoText1");	
+	htmlTag.classList.remove("espacoText2");
+	htmlTag.classList.remove("espacoText3");
 	rangeEspacoTextoTag.setAttribute("value", tamEspacoTexto);
 	break;
 	case "2": 
-	htmlTag.classList.remove("espacoText"+'1');	
-	htmlTag.classList.remove("espacoText"+'2');
-	htmlTag.classList.remove("espacoText"+'3');
-	htmlTag.classList.add("espacoText"+'1');
+	htmlTag.classList.remove("espacoText1");	
+	htmlTag.classList.remove("espacoText2");
+	htmlTag.classList.remove("espacoText3");
+	htmlTag.classList.add("espacoText1");
 	rangeEspacoTextoTag.setAttribute("value", tamEspacoTexto);
 	break;
 	case "3": 
-	htmlTag.classList.remove("espacoText"+'1');	
-	htmlTag.classList.remove("espacoText"+'2');
-	htmlTag.classList.remove("espacoText"+'3');
-	htmlTag.classList.add("espacoText"+'2');
+	htmlTag.classList.remove("espacoText1");	
+	htmlTag.classList.remove("espacoText2");
+	htmlTag.classList.remove("espacoText3");
+	htmlTag.classList.add("espacoText2");
 	rangeEspacoTextoTag.setAttribute("value", tamEspacoTexto);
 	break;
 	case "4": 
-	htmlTag.classList.remove("espacoText"+'1');	
-	htmlTag.classList.remove("espacoText"+'2');
-	htmlTag.classList.remove("espacoText"+'3');
-	htmlTag.classList.add("espacoText"+'3');
+	htmlTag.classList.remove("espacoText1");	
+	htmlTag.classList.remove("espacoText2");
+	htmlTag.classList.remove("espacoText3");
+	htmlTag.classList.add("espacoText3");
 	rangeEspacoTextoTag.setAttribute("value", tamEspacoTexto);
 	break;
 
@@ -207,50 +197,50 @@ var rangeEspacoLinhasTag = document.getElementById("tamEspacoLinhas");
 function espacoLinhas(){
 	let tamanhoEspacoLinhas = parseInt(document.querySelector('#tamEspacoLinhas').value);
 	tamEspacoLinhas = window.sessionStorage.setItem("tamEspacoLinhas", tamanhoEspacoLinhas);
-	htmlTag.classList.remove("espacoLine"+'1');	
-	htmlTag.classList.remove("espacoLine"+'2');
-	htmlTag.classList.remove("espacoLine"+'3');
+	htmlTag.classList.remove("espacoLine1");	
+	htmlTag.classList.remove("espacoLine2");
+	htmlTag.classList.remove("espacoLine3");
 	if(tamanhoEspacoLinhas == 1){
 		htmlTag.classList.add("");
 	}
 	else if(tamanhoEspacoLinhas == 2){
-		htmlTag.classList.add("espacoLine"+'1');
+		htmlTag.classList.add("espacoLine1");
 	}
 	else if(tamanhoEspacoLinhas == 3){
-		htmlTag.classList.add("espacoLine"+'2');
+		htmlTag.classList.add("espacoLine2");
 	}
 	else if(tamanhoEspacoLinhas == 4){
-		htmlTag.classList.add("espacoLine"+'3');
+		htmlTag.classList.add("espacoLine3");
 	}
 
 }
  
 switch(tamEspacoLinhas){
 	case "1": 
-	htmlTag.classList.remove("espacoLine"+'1');	
-	htmlTag.classList.remove("espacoLine"+'2');
-	htmlTag.classList.remove("espacoLine"+'3');
+	htmlTag.classList.remove("espacoLine1");	
+	htmlTag.classList.remove("espacoLine2");
+	htmlTag.classList.remove("espacoLine3");
 	rangeEspacoLinhasTag.setAttribute("value", tamEspacoLinhas);
 	break;
 	case "2": 
-	htmlTag.classList.remove("espacoLine"+'1');	
-	htmlTag.classList.remove("espacoLine"+'2');
-	htmlTag.classList.remove("espacoLine"+'3');
-	htmlTag.classList.add("espacoLine"+'1');
+	htmlTag.classList.remove("espacoLine1");	
+	htmlTag.classList.remove("espacoLine2");
+	htmlTag.classList.remove("espacoLine3");
+	htmlTag.classList.add("espacoLine1");
 	rangeEspacoLinhasTag.setAttribute("value", tamEspacoLinhas);
 	break;
 	case "3": 
-	htmlTag.classList.remove("espacoLine"+'1');	
-	htmlTag.classList.remove("espacoLine"+'2');
-	htmlTag.classList.remove("espacoLine"+'3');
-	htmlTag.classList.add("espacoLine"+'2');
+	htmlTag.classList.remove("espacoLine1");	
+	htmlTag.classList.remove("espacoLine2");
+	htmlTag.classList.remove("espacoLine3");
+	htmlTag.classList.add("espacoLine2");
 	rangeEspacoLinhasTag.setAttribute("value", tamEspacoLinhas);
 	break;
 	case "4": 
-	htmlTag.classList.remove("espacoLine"+'1');	
-	htmlTag.classList.remove("espacoLine"+'2');
-	htmlTag.classList.remove("espacoLine"+'3');
-	htmlTag.classList.add("espacoLine"+'3');
+	htmlTag.classList.remove("espacoLine1");	
+	htmlTag.classList.remove("espacoLine2");
+	htmlTag.classList.remove("espacoLine3");
+	htmlTag.classList.add("espacoLine3");
 	rangeEspacoLinhasTag.setAttribute("value", tamEspacoLinhas);
 	break;
 

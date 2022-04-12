@@ -15,10 +15,11 @@ Em caso de utilizar PHP(utilizando componentização):
 
 * Crie dentro da pasta assets>vendor uma pasta chamada acessibilidade e adicione as pastas da pasta assets
 * Adicione o css: `<link *rel*="stylesheet" *type*="text/css" *href*="assets/vendor/acessibilidade/css/acessibility.css">`
-* Adicione o javascript:   `<script type="text/javascript" src="assets/js/acessibility.js"></script>`
+* Adicione o javascript:   `<script type="text/javascript" src="assets/vendor/acessibilidade/js/acessibility.js"></script>`
 * Altere o nome do arquivo acessibility.html para acessibility.php, apague todo o conteudo que não esteja dentro da tag body.
-* mova o arquivo acessibility.php para assets>partias
+* mova o arquivo acessibility.php para assets>partials
 * Em components>blocks>header.php adicione: `<?php include 'partials/acessibility.php'; ?>`
+* Obs: Url de arquivos do tipo imagem devem ser alterados para: assets/vendor/img/nome_img.png
 
 ### Funcionamento da Ferramenta
 
